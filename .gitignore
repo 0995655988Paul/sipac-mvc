@@ -1,0 +1,31 @@
+# Configuración local y dependencias
+.env
+/vendor/
+
+# Bases de datos y archivos generados
+/writable/*.db
+/writable/*.db-*
+/writable/cache/*
+!/writable/cache/index.html
+/writable/logs/*
+!/writable/logs/index.html
+/writable/session/*
+!/writable/session/index.html
+/writable/uploads/*
+!/writable/uploads/index.html
+/writable/debugbar/*
+!/writable/debugbar/index.html
+/build/
+/.phpunit.cache/
+/.phpunit.result.cache
+/phpunit.xml
+php_errors.log
+
+# Archivos del sistema y del editor
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*~

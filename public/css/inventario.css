@@ -1,0 +1,309 @@
+:root {
+    color-scheme: light;
+    --rojo: #ad2438;
+    --rojo-oscuro: #8f1b2d;
+    --azul: #1d2d35;
+    --tinta: #26363e;
+    --gris: #637179;
+    --borde: #e2e6e8;
+    --fondo: #f5f6f8;
+    --lateral: 224px;
+}
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    color: var(--tinta);
+    background: var(--fondo);
+    font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+h1, h2, p { margin: 0; }
+h1 { font-size: clamp(25px, 2.5vw, 34px); font-weight: 750; line-height: 1.2; letter-spacing: -1px; }
+h2 { font-size: 19px; font-weight: 700; line-height: 1.35; letter-spacing: -.3px; }
+form { margin: 0; }
+a { color: var(--rojo); }
+button, input { font: inherit; }
+.icono { width: 20px; height: 20px; flex-shrink: 0; vertical-align: middle; }
+.etiqueta { margin-bottom: 10px; color: var(--rojo); font-size: 10px; font-weight: 750; letter-spacing: 1.7px; }
+.subtitulo { margin-top: 10px; color: var(--gris); }
+
+.marca-campus { display: flex; align-items: center; gap: 17px; }
+.marca-udla { color: var(--rojo); font-size: 35px; font-weight: 850; line-height: 1; letter-spacing: -2px; }
+.nombre-universidad { padding-left: 17px; border-left: 1px solid #d8dcdf; font-size: 11px; font-weight: 650; line-height: 1.3; }
+.marca-hanaska { display: flex; align-items: center; gap: 9px; color: var(--azul); }
+.marca-hanaska > span { font-size: 23px; font-weight: 650; letter-spacing: -.8px; }
+.marca-hanaska > .icono { width: 29px; height: 29px; }
+.marca-hanaska small { padding-left: 14px; margin-left: 6px; border-left: 1px solid var(--borde); color: var(--gris); font-size: 9px; font-weight: 650; letter-spacing: 1.6px; }
+
+.barra-superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 84px;
+    padding: 20px 36px;
+    border-top: 4px solid var(--rojo);
+    border-bottom: 1px solid var(--borde);
+    background: #fff;
+}
+.barra-lateral {
+    position: fixed;
+    top: 84px;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: var(--lateral);
+    overflow-y: auto;
+    padding: 32px 20px 24px;
+    color: #fff;
+    background: var(--azul);
+}
+.titulo-app { display: flex; align-items: center; gap: 11px; color: #fff; font-size: 20px; font-weight: 650; text-decoration: none; }
+.titulo-app small { display: block; margin-top: 5px; color: #b9c6cc; font-size: 8px; font-weight: 550; letter-spacing: 1px; }
+.marca-icono { display: grid; width: 42px; height: 42px; place-items: center; border: 1px solid #506169; border-radius: 12px; }
+.marca-icono .icono { width: 26px; height: 26px; }
+.menu-etiqueta { margin: 42px 10px 12px; color: #a8bac4; font-size: 9px; font-weight: 650; letter-spacing: 1.5px; }
+.menu-activo { display: flex; align-items: center; gap: 12px; padding: 13px 15px; color: #fff; background: var(--rojo); border-radius: 8px; font-weight: 650; text-decoration: none; }
+.menu-activo:hover { background: var(--rojo-oscuro); }
+.nota-cocina { margin-top: 48px; padding: 20px 15px; border: 1px solid #3c5059; border-radius: 12px; }
+.nota-cocina > .icono { width: 30px; height: 30px; margin-bottom: 15px; color: #e5b77a; }
+.nota-cocina strong { display: block; font-size: 12px; }
+.nota-cocina p { margin-top: 7px; color: #bbcad1; font-size: 12px; line-height: 1.7; }
+.sesion { margin-top: auto; padding-top: 30px; }
+.usuario-sesion { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+.usuario-sesion > span:last-child { min-width: 0; }
+.usuario-sesion strong { display: block; overflow-wrap: anywhere; font-size: 13px; }
+.usuario-sesion small { display: block; margin-bottom: 3px; color: #aabdc7; font-size: 8px; letter-spacing: 1px; }
+.avatar { display: grid; flex-shrink: 0; width: 36px; height: 36px; place-items: center; color: #f7dce1; background: #5c3944; border-radius: 50%; font-weight: 650; }
+.contenedor { max-width: 1440px; margin: 0 auto 0 var(--lateral); padding: 30px 36px 24px; }
+.ruta-pagina { margin-bottom: 28px; color: var(--gris); font-size: 11px; }
+.ruta-pagina span { padding: 0 9px; color: #b3bdc3; }
+.encabezado-pagina { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 28px; }
+
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 10px 15px;
+    border: 1px solid #dce1e4;
+    border-radius: 7px;
+    color: var(--tinta);
+    background: #fff;
+    font-size: 12px;
+    font-weight: 650;
+    line-height: 1.4;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background .15s, border-color .15s;
+}
+.boton:hover { border-color: #c4cdd3; background: #f5f7f8; }
+.boton-principal { min-height: 46px; padding: 12px 18px; border-color: var(--rojo); color: #fff; background: var(--rojo); }
+.boton-principal:hover { color: #fff; background: var(--rojo-oscuro); border-color: var(--rojo-oscuro); }
+.boton-peligro { border-color: #efd3d8; color: var(--rojo); }
+.boton-peligro:hover { background: #fff1f3; border-color: #d5a5ae; }
+.boton-pequeno { min-height: 34px; padding: 7px 10px; font-size: 11px; }
+.boton-pequeno .icono { width: 15px; height: 15px; }
+.boton-salir { width: 100%; border-color: #465a64; color: #dae4e9; background: transparent; }
+.boton-salir:hover { color: #fff; background: #314751; border-color: #647e8d; }
+.boton:focus-visible, a:focus-visible { outline: 3px solid #d78c9a; outline-offset: 4px; }
+.saltar-contenido { position: fixed; z-index: 10; top: 8px; left: 12px; padding: 10px; color: #fff; background: var(--azul); transform: translateY(-160%); }
+.saltar-contenido:focus { transform: translateY(0); }
+
+.resumen { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-bottom: 28px; }
+.indicador { display: flex; align-items: center; gap: 16px; min-height: 112px; padding: 22px; background: #fff; border: 1px solid var(--borde); border-radius: 12px; }
+.indicador p { color: var(--gris); font-size: 11px; }
+.indicador p small { display: block; font-size: 9px; }
+.indicador > div { min-width: 0; }
+.indicador strong { display: block; margin-top: 4px; font-size: 29px; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums; letter-spacing: -.8px; overflow-wrap: anywhere; }
+.indicador-icono { display: grid; flex-shrink: 0; width: 45px; height: 45px; place-items: center; color: var(--rojo); background: #faedf0; border-radius: 12px; }
+.indicador-icono .icono { width: 24px; height: 24px; }
+.indicador-azul { color: #35566a; background: #eaf0f5; }
+.indicador-ambar { color: #95621c; background: #fbf3e4; }
+.tarjeta { overflow: hidden; background: #fff; border: 1px solid var(--borde); border-radius: 12px; }
+.encabezado { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 23px 25px; }
+.encabezado p { margin-top: 5px; color: var(--gris); font-size: 12px; }
+.contador { flex-shrink: 0; padding: 5px 10px; color: #64757f; background: #f0f3f5; border-radius: 6px; font-size: 10px; font-weight: 650; }
+.tabla-contenedor { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; }
+th, td { padding: 17px 15px; border-bottom: 1px solid #ecedef; }
+th { color: #687881; background: #f8f9fa; font-size: 9px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; white-space: nowrap; }
+th:first-child, td:first-child { padding-left: 25px; }
+th:last-child, td:last-child { padding-right: 25px; }
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:hover { background: #fdfcfc; }
+td { font-size: 12px; }
+.id-alimento { color: #87949b; font-size: 11px; }
+.nombre-alimento { display: flex; align-items: center; gap: 11px; min-width: 150px; }
+.nombre-alimento strong { max-width: 270px; font-size: 13px; overflow-wrap: anywhere; }
+.alimento-icono { display: grid; flex-shrink: 0; width: 36px; height: 36px; place-items: center; color: #647959; background: #edf2e9; border-radius: 9px; }
+.numero { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.cantidad { font-weight: 650; }
+.cantidad small { color: var(--gris); font-size: 10px; font-weight: 400; }
+.estado { display: inline-flex; align-items: center; gap: 6px; padding: 5px 8px; border-radius: 5px; font-size: 10px; font-weight: 600; white-space: nowrap; }
+.estado > span { width: 5px; height: 5px; background: currentColor; border-radius: 50%; }
+.estado-disponible { color: #426543; background: #edf5ec; }
+.estado-bajo { color: #886022; background: #fff3dc; }
+.estado-agotado { color: #a33245; background: #fcebef; }
+.acciones { display: flex; align-items: center; gap: 8px; }
+.sin-productos { padding: 42px 20px; text-align: center; }
+.sin-productos > .icono { display: block; width: 42px; height: 42px; margin: 0 auto 15px; color: #a0aca2; }
+.sin-productos strong { display: block; font-size: 16px; }
+.sin-productos p { margin: 8px 0 20px; color: var(--gris); }
+.nota-inventario { display: flex; align-items: center; gap: 16px; position: relative; min-height: 107px; margin-top: 24px; padding: 25px 185px 25px 25px; background: #f0eeea; border-radius: 12px; }
+.nota-inventario > .icono { width: 30px; height: 30px; color: var(--rojo); }
+.nota-inventario p { font-size: 13px; font-weight: 650; }
+.nota-inventario p span { display: block; margin-top: 4px; color: #6b7375; font-size: 11px; font-weight: 400; }
+.nota-inventario img { position: absolute; right: 20px; top: -7px; width: 158px; height: 120px; }
+.pie-pagina { display: flex; justify-content: space-between; gap: 15px; margin-top: 30px; color: #6b7780; font-size: 10px; }
+.pie-pagina > span { color: #7e8990; }
+
+.formulario-pagina { max-width: 1060px; }
+.enlace-volver { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 26px; color: var(--gris); font-size: 12px; font-weight: 600; text-decoration: none; }
+.enlace-volver .icono { width: 16px; height: 16px; }
+.enlace-volver:hover { color: var(--rojo); }
+.formulario-icono { display: grid; width: 42px; height: 42px; place-items: center; color: var(--rojo); background: #faedf0; border-radius: 10px; }
+.formulario-alimento { padding: 5px 25px 28px; }
+.formulario-pagina .alerta { margin-right: 25px; margin-left: 25px; }
+.campos-dobles { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.campo { margin-bottom: 20px; }
+label { display: block; margin-bottom: 7px; font-size: 12px; font-weight: 650; }
+input { display: block; width: 100%; min-width: 0; height: 46px; padding: 11px 13px; border: 1px solid #d9dfe3; border-radius: 7px; color: var(--tinta); background: #fff; font-size: 13px; }
+input::placeholder { color: #819099; opacity: 1; }
+input:focus { border-color: var(--rojo); outline: 3px solid #fae5e9; outline-offset: 0; }
+input[aria-invalid="true"] { border-color: #bb4b60; }
+.ayuda { display: block; margin-top: 6px; color: #687780; font-size: 11px; line-height: 1.5; }
+.error-campo { margin: 6px 0 0; color: #a32c42; font-size: 12px; }
+.nota-formulario { display: flex; align-items: flex-start; gap: 10px; margin: 4px 0 26px; padding: 13px 15px; color: #79581e; background: #fcf6e9; border-radius: 7px; font-size: 11px; }
+.nota-formulario .icono { width: 17px; height: 17px; }
+.acciones-formulario { padding-top: 22px; border-top: 1px solid var(--borde); }
+.alerta { margin: 0 0 20px; padding: 13px 16px; border: 1px solid; border-radius: 7px; font-size: 12px; }
+.alerta ul { margin: 0; padding-left: 18px; }
+.alerta p { margin-top: 5px; }
+.alerta-exito, .alerta-info { color: #285b3f; background: #edf5ef; border-color: #c5dccb; }
+.alerta-error { color: #9c3044; background: #fff0f3; border-color: #ecc5cf; }
+
+.pagina-acceso { display: grid; min-height: 100vh; place-items: center; padding: 36px 24px; background: #eef0f3; }
+.acceso { display: grid; grid-template-columns: .95fr 1fr; width: min(100%, 1080px); min-height: 630px; overflow: hidden; background: #fff; border: 1px solid #e1e5e8; border-radius: 18px; box-shadow: 0 18px 60px #1d2d3512; }
+.acceso-presentacion { display: flex; flex-direction: column; position: relative; padding: 40px; color: #fff; background: var(--azul); }
+.acceso-presentacion .marca-udla { color: #fff; }
+.acceso-presentacion .nombre-universidad { border-color: #51626a; }
+.presentacion-contenido { margin: auto 0; padding-top: 48px; }
+.acceso-presentacion .etiqueta { color: #edb0bc; font-size: 10px; }
+.presentacion-contenido h2 { max-width: 400px; font-size: clamp(27px, 3vw, 36px); line-height: 1.22; letter-spacing: -.9px; }
+.presentacion-contenido > p:not(.etiqueta) { max-width: 345px; margin-top: 17px; color: #b9c9d1; font-size: 13px; line-height: 1.8; }
+.ilustracion-acceso { display: block; width: min(100%, 340px); height: auto; margin: 16px auto 8px; }
+.nota-academica { padding-top: 24px; color: #a6b8c1; font-size: 10px; }
+.acceso-formulario { width: 100%; align-self: center; padding: 48px 58px; }
+.acceso-formulario > .marca-hanaska { margin-bottom: 40px; }
+.acceso-formulario h1 { font-size: 32px; }
+.acceso-formulario > .subtitulo { margin-bottom: 28px; font-size: 12px; line-height: 1.7; }
+.boton-login { width: 100%; min-height: 48px; margin-top: 4px; }
+.boton-login .icono { margin-left: 8px; width: 18px; height: 18px; }
+.enlace-cuenta { margin: 22px 0 0; color: var(--gris); text-align: center; font-size: 12px; }
+.enlace-cuenta a { margin-left: 3px; font-weight: 700; text-underline-offset: 3px; }
+.nota-acceso { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 35px; color: #75828b; font-size: 10px; }
+.nota-acceso .icono { width: 15px; height: 15px; }
+.registro { padding: 36px 50px; }
+.registro .campo { margin-bottom: 16px; }
+.registro .subtitulo { margin-bottom: 23px; }
+.registro .enlace-volver { margin-bottom: 23px; }
+
+@media (min-width: 1665px) {
+    .contenedor { margin-right: auto; margin-left: calc(var(--lateral) + (100% - var(--lateral) - 1440px) / 2); }
+}
+@media (max-width: 1100px) {
+    :root { --lateral: 200px; }
+    .barra-lateral { padding-right: 16px; padding-left: 16px; }
+    .contenedor { padding: 28px 24px; }
+    .indicador { gap: 12px; padding: 16px; }
+    .indicador-icono { width: 36px; height: 36px; }
+    .indicador p { font-size: 10px; }
+    .indicador strong { font-size: 26px; }
+    .acceso-formulario { padding-right: 36px; padding-left: 36px; }
+}
+@media (max-width: 820px) {
+    .barra-superior { min-height: 74px; padding: 18px 24px; }
+    .marca-udla { font-size: 30px; }
+    .barra-lateral { position: static; width: 100%; padding: 13px 24px; flex-direction: row; align-items: center; gap: 18px; }
+    .titulo-app, .menu-etiqueta, .nota-cocina, .usuario-sesion small { display: none; }
+    .menu-activo { padding: 9px 13px; font-size: 12px; }
+    .sesion { display: flex; align-items: center; gap: 15px; margin: 0 0 0 auto; padding: 0; }
+    .usuario-sesion { margin: 0; }
+    .avatar { width: 30px; height: 30px; }
+    .boton-salir { min-height: 36px; padding: 7px 10px; font-size: 11px; }
+    .boton-salir .icono { width: 16px; height: 16px; }
+    .contenedor { margin: 0 auto; }
+    .encabezado-pagina { gap: 16px; }
+    .encabezado-pagina h1 { font-size: 29px; }
+    .acceso { grid-template-columns: .9fr 1fr; }
+    .acceso-presentacion { padding: 30px; }
+    .acceso-presentacion .nombre-universidad { display: none; }
+    .presentacion-contenido h2 { font-size: 29px; }
+    .acceso-formulario { padding: 32px 28px; }
+    .marca-hanaska small { display: none; }
+}
+@media (max-width: 600px) {
+    .barra-superior { padding: 17px 20px; }
+    .nombre-universidad { padding-left: 10px; font-size: 9px; }
+    .marca-campus { gap: 10px; }
+    .marca-hanaska > span { font-size: 19px; }
+    .marca-hanaska > .icono { width: 23px; height: 23px; }
+    .barra-lateral { gap: 10px; padding: 13px 16px; }
+    .sesion { gap: 10px; }
+    .usuario-sesion { gap: 0; }
+    .usuario-sesion strong { display: none; }
+    .contenedor { padding: 24px 18px; }
+    .ruta-pagina { margin-bottom: 24px; }
+    .encabezado-pagina { flex-direction: column; align-items: flex-start; margin-bottom: 24px; }
+    .encabezado-pagina h1 { font-size: 28px; }
+    .encabezado-pagina > .boton { width: 100%; }
+    .subtitulo { font-size: 12px; }
+    .resumen { grid-template-columns: 1fr; gap: 9px; margin-bottom: 22px; }
+    .indicador { gap: 16px; padding: 15px 18px; min-height: 86px; }
+    .indicador p { font-size: 11px; line-height: 1.3; }
+    .indicador p small { display: inline; margin-left: 4px; font-size: 9px; }
+    .indicador strong { margin-top: 7px; font-size: 24px; }
+    .encabezado { gap: 10px; padding: 20px; }
+    .encabezado h2 { font-size: 16px; }
+    .encabezado p { font-size: 11px; }
+    .contador { padding: 5px 7px; font-size: 9px; }
+    .tabla-contenedor { overflow: visible; }
+    table, tbody { display: block; }
+    thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+    tbody tr { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 16px 10px; padding: 20px; border-top: 1px solid var(--borde); }
+    tbody td { padding: 0 !important; border: 0; text-align: left; }
+    tbody td:nth-child(1):not(.sin-productos) { position: absolute; right: 20px; top: 22px; }
+    tbody td:nth-child(2) { grid-column: 1 / -1; padding-right: 35px !important; }
+    .nombre-alimento { min-width: 0; }
+    tbody td:nth-child(3)::before { content: "PRECIO UNITARIO"; }
+    tbody td:nth-child(4)::before { content: "CANTIDAD"; }
+    tbody td:nth-child(3)::before, tbody td:nth-child(4)::before { display: block; margin-bottom: 3px; color: #73818a; font-size: 8px; font-weight: 650; letter-spacing: .6px; }
+    tbody td:nth-child(5), tbody td:nth-child(6) { grid-column: 1 / -1; }
+    .acciones { gap: 10px; }
+    .acciones > a, .acciones > form { flex: 1; }
+    .acciones > form .boton { width: 100%; }
+    .boton-pequeno { min-height: 38px; }
+    .sin-productos { grid-column: 1 / -1; padding: 15px 0 !important; text-align: center; }
+    .nota-inventario { min-height: 0; padding: 20px; }
+    .nota-inventario img { display: none; }
+    .nota-inventario p { font-size: 12px; }
+    .pie-pagina { align-items: center; flex-direction: column; gap: 5px; }
+    .formulario-alimento { padding: 5px 20px 22px; }
+    .campos-dobles { grid-template-columns: 1fr; gap: 0; }
+    .acciones-formulario { flex-direction: column; }
+    .acciones-formulario > .boton { width: 100%; }
+    .pagina-acceso { display: block; padding: 0; background: #fff; }
+    .acceso { min-height: 100vh; display: block; border: 0; border-radius: 0; box-shadow: none; }
+    .acceso-presentacion { padding: 22px 26px; border-bottom: 4px solid var(--rojo); }
+    .acceso-presentacion .nombre-universidad { display: block; }
+    .presentacion-contenido, .nota-academica { display: none; }
+    .acceso-formulario { padding: 38px 26px; }
+    .acceso-formulario > .marca-hanaska { margin-bottom: 28px; }
+    .acceso-formulario h1 { font-size: 30px; }
+    .registro { padding-top: 28px; }
+}

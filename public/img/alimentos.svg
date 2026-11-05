@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" fill="none">
+  <ellipse cx="215" cy="279" rx="156" ry="19" fill="#182B32" opacity=".08"/>
+  <circle cx="217" cy="157" r="132" fill="#F6EBDB"/>
+  <circle cx="215" cy="154" r="108" fill="#FFFFFF"/>
+  <circle cx="215" cy="154" r="88" fill="#EDF1E8" stroke="#DFE6D8" stroke-width="2"/>
+  <path d="M173 97c-45-16-52 17-39 37-28 20-2 48 18 43-9 31 20 48 40 26 19 23 46 7 38-19 24 2 43-27 20-43 10-22-6-43-31-32-6-29-31-34-46-12Z" fill="#7F9B60"/>
+  <path d="m149 135 54 38m-25-54 13 28m-29 28 25-10m30-35-17 29" stroke="#5D7B45" stroke-width="3" stroke-linecap="round"/>
+  <path d="M238 95c-12-11-33 5-20 20l43 54c13 14 35-2 23-16l-46-58Z" fill="#EFC473"/>
+  <path d="m225 109 42 54m-31-64 8 13m6 6 10 15" stroke="#D7A653" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="166" cy="181" r="23" fill="#BA3744"/>
+  <circle cx="166" cy="181" r="16" fill="#D85B63"/>
+  <path d="m166 169 3 7 8-1-6 5 3 8-8-4-7 4 2-8-6-5 8 1 3-7Z" fill="#E9927D"/>
+  <circle cx="235" cy="188" r="28" fill="#C8494F"/>
+  <circle cx="235" cy="188" r="20" fill="#DE6A68"/>
+  <path d="m235 173 4 10 10-2-8 7 4 10-10-5-9 5 3-10-8-7 10 2 4-10Z" fill="#F1A084"/>
+  <path d="M195 151c-10 3-17 17-10 28s24 16 39 11c5-18-8-41-29-39Z" fill="#E5EAC2" stroke="#ADC189" stroke-width="4"/>
+  <ellipse cx="205" cy="170" rx="8" ry="11" transform="rotate(-26 205 170)" fill="#B8C88E"/>
+  <circle cx="266" cy="140" r="18" fill="#F4D171"/>
+  <path d="m266 125 1 29m-15-14h29m-25-10 20 20m-20 0 20-20" stroke="#FFFFFF" stroke-width="2" opacity=".7"/>
+  <circle cx="193" cy="116" r="5" fill="#E9D8AF"/><circle cx="210" cy="135" r="5" fill="#E9D8AF"/>
+  <circle cx="150" cy="151" r="4" fill="#E9D8AF"/><circle cx="215" cy="211" r="4" fill="#E9D8AF"/>
+  <path d="M70 82v150m-10-150v38c0 14 20 14 20 0V82m-10 0v39" stroke="#9CA7A7" stroke-width="6" stroke-linecap="round"/>
+  <path d="M366 82v150m0-150c-17 23-21 60 0 64" stroke="#9CA7A7" stroke-width="6" stroke-linecap="round"/>
+  <path d="M107 31c-5-11-20-13-27-4 8 11 19 10 27 4Z" fill="#7F9B60"/>
+  <path d="M321 249c-5-11-20-13-27-4 8 11 19 10 27 4Z" fill="#7F9B60"/>
+  <circle cx="328" cy="59" r="5" fill="#BA3744"/><circle cx="108" cy="260" r="4" fill="#E6BA68"/>
+</svg>

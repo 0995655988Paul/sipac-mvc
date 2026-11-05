@@ -1,0 +1,38 @@
+# Impide listar las carpetas.
+Options -Indexes
+
+# Activa las rutas de la aplicación.
+<IfModule mod_rewrite.c>
+	Options +FollowSymlinks
+	RewriteEngine On
+
+	# Ajusta RewriteBase si usas una subcarpeta.
+	# RewriteBase /
+
+	# Quita la barra final de las URLs.
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_URI} (.+)/$
+	RewriteRule ^ %1 [L,R=301]
+
+	# Redirige al dominio sin www.
+	RewriteCond %{HTTPS} !=on
+	RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+	RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+
+	# Envía las rutas a index.php.
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^([\s\S]*)$ index.php/$1 [L,NC,QSA]
+
+	# Conserva la cabecera de autorización.
+	RewriteCond %{HTTP:Authorization} .
+	RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+	# Atiende los errores 404 sin mod_rewrite.
+	ErrorDocument 404 index.php
+</IfModule>
+
+# Oculta la firma del servidor.
+ServerSignature Off

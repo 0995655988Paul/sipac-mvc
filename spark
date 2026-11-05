@@ -1,0 +1,48 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * Parte de CodeIgniter 4.
+ * (c) CodeIgniter Foundation <admin@codeigniter.com>
+ * Licencia y derechos de autor: véase LICENSE.
+ */
+
+use CodeIgniter\Boot;
+use Config\Paths;
+
+// Ejecuta los comandos desde PHP CLI.
+if (str_starts_with(PHP_SAPI, 'cgi')) {
+    exit("The cli tool is not supported when running php-cgi. It needs php-cli to function!\n\n");
+}
+
+// Comprueba la versión de PHP; mantenla igual en public/index.php.
+$minPhpVersion = '8.2';
+if (version_compare(PHP_VERSION, $minPhpVersion, '<')) {
+    $message = sprintf(
+        'Your PHP version must be %s or higher to run CodeIgniter. Current version: %s',
+        $minPhpVersion,
+        PHP_VERSION,
+    );
+
+    exit($message);
+}
+
+// Muestra los errores en la terminal.
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
+// Carpeta pública de la aplicación.
+define('FCPATH', __DIR__ . DIRECTORY_SEPARATOR . 'public' . DIRECTORY_SEPARATOR);
+
+// Trabaja desde la carpeta pública.
+chdir(FCPATH);
+
+// Carga las rutas de las carpetas.
+require FCPATH . '../app/Config/Paths.php';
+
+$paths = new Paths();
+
+// Inicia CodeIgniter.
+require $paths->systemDirectory . '/Boot.php';
+
+exit(Boot::bootSpark($paths));
