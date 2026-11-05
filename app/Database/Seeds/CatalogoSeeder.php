@@ -30,8 +30,22 @@ class CatalogoSeeder extends Seeder
 
         if ($db->table('proveedores')->countAllResults() === 0) {
             $db->table('proveedores')->insertBatch([
-                ['razon_social' => 'Distribuidora Andina S.A.', 'identificacion_fiscal' => '1790016919001', 'contacto' => 'María Paredes', 'correo' => 'ventas@andina.test', 'telefono' => '0991234567', 'activo' => 1],
-                ['razon_social' => 'Comercial Sierra Norte', 'identificacion_fiscal' => '0990004196001', 'contacto' => 'Luis Cedeño', 'correo' => 'compras@sierra.test', 'telefono' => '0987654321', 'activo' => 1],
+                ['razon_social' => 'PROCESADORA NACIONAL DE ALIMENTOS PRONACA C.A. · Mr. Pollo / Indaves', 'identificacion_fiscal' => '1790319857001', 'contacto' => 'Ventas PRONACA', 'correo' => 'ventas@pronaca.test', 'telefono' => '0991234567', 'activo' => 1],
+                ['razon_social' => 'LA FABRIL S.A. · La Favorita / Girasol', 'identificacion_fiscal' => '1390012949001', 'contacto' => 'Ventas La Fabril', 'correo' => 'comercial@lafabril.test', 'telefono' => '0987654321', 'activo' => 1],
+            ]);
+        } else {
+            // Actualiza los registros de demostración antiguos sin tocar proveedores reales.
+            $db->table('proveedores')->where('identificacion_fiscal', '1790016919001')->update([
+                'razon_social' => 'PROCESADORA NACIONAL DE ALIMENTOS PRONACA C.A. · Mr. Pollo / Indaves',
+                'identificacion_fiscal' => '1790319857001',
+                'contacto' => 'Ventas PRONACA',
+                'correo' => 'ventas@pronaca.test',
+            ]);
+            $db->table('proveedores')->where('identificacion_fiscal', '0990004196001')->update([
+                'razon_social' => 'LA FABRIL S.A. · La Favorita / Girasol',
+                'identificacion_fiscal' => '1390012949001',
+                'contacto' => 'Ventas La Fabril',
+                'correo' => 'comercial@lafabril.test',
             ]);
         }
 

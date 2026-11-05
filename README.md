@@ -6,7 +6,7 @@ Administración web del core aprobado de **SIPAC: Sistema de planificación de c
 
 - Inicio de sesión con sesión regenerada, CSRF y contraseñas con `bcrypt`.
 - CRUD de productos con código interno, unidad, stock de seguridad y prioridad.
-- Proveedores con RUC ecuatoriano validado en **back-end** antes del `INSERT`; el RUC también tiene índice `UNIQUE` en la base.
+- Proveedores ecuatorianos de demostración: PRONACA (Mr. Pollo / Indaves) y La Fabril (La Favorita / Girasol), con RUC validado en **back-end** antes del `INSERT`; el RUC también tiene índice `UNIQUE` en la base.
 - Cotizaciones relacionadas con un proveedor y un producto por dropdowns.
 - Inventario con entradas y consumos; el saldo se calcula como entradas menos consumos.
 - Presupuestos mensuales y cálculo de monto disponible.
