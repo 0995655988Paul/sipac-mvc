@@ -29,3 +29,19 @@ h1{font-size:clamp(1.8rem,3vw,2.35rem);font-weight:700;letter-spacing:0}
 .sidebar__note p{font-size:.75rem}
 
 @media(max-width:720px){.topbar{padding:0 18px}}
+
+/* Login sencillo, sin ilustraciones ni mensajes decorativos. */
+.acceso--login{background:#f3f5f7}
+.acceso__tarjeta--login{display:block;width:min(430px,calc(100% - 32px));min-height:0;border:1px solid #d7dfe6;border-radius:6px;box-shadow:0 4px 14px rgba(25,50,75,.08)}
+.acceso__tarjeta--login .acceso__formulario{padding:34px 36px}
+.login__marca{display:flex;align-items:center;gap:10px;margin-bottom:28px}
+.login__marca .marca__simbolo{width:32px;height:32px;border-radius:4px;background:var(--blue);color:#fff;font-size:1rem}
+.login__marca strong{display:block;font-size:1rem;color:var(--ink)}
+.login__marca small{display:block;margin-top:2px;color:var(--muted);font-size:.72rem}
+.acceso__tarjeta--login h1{margin:0 0 6px;font-size:1.65rem;letter-spacing:0}
+.acceso__tarjeta--login .muted{margin:0 0 22px}
+.acceso__tarjeta--login .formulario{margin-top:0;gap:15px}
+.acceso__tarjeta--login .formulario__pie{margin-top:18px}
+.acceso__tarjeta--login .seguridad{display:none}
+
+@media(max-width:520px){.acceso__tarjeta--login .acceso__formulario{padding:28px 24px}}
