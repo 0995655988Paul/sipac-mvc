@@ -70,7 +70,7 @@ php -l app/Services/RucEcuador.php
 
 Las pruebas unitarias cubren el algoritmo de RUC y la fórmula de necesidad/costo. Además, el recorrido manual anterior comprueba la relación dependiente y la revalidación de back-end.
 
-## Git y despliegue
+## Git
 
 El proyecto tiene su propio repositorio Git local y debe publicarse en el repositorio remoto de la entrega:
 
@@ -83,11 +83,4 @@ git remote add origin https://github.com/TU_USUARIO/sipac-mvc.git
 git push -u origin main
 ```
 
-Incluí `Dockerfile`, `docker-entrypoint.sh` y `render.yaml` para desplegarlo en cualquier servicio compatible con Docker, incluido Render. El despliegue real necesita que el estudiante conecte su cuenta y defina la URL pública; no se guardan credenciales dentro del proyecto.
-
-```bash
-docker build -t sipac-mvc .
-docker run --rm -p 8080:8080 sipac-mvc
-```
-
-En producción cambia `app.baseURL`, usa HTTPS y reemplaza las credenciales de demostración. SQLite en un servicio efímero sirve para la demostración académica; para datos persistentes conviene migrar el grupo de base a PostgreSQL/MySQL.
+Para publicar el proyecto, conecta este repositorio a la plataforma de hosting que indique la materia y configura `app.baseURL` con la URL pública. En producción usa HTTPS, cambia las credenciales de demostración y utiliza una base persistente.
