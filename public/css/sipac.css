@@ -32,173 +32,181 @@ h1{font-size:clamp(1.8rem,3vw,2.35rem);font-weight:700;letter-spacing:0}
 
 /* Acceso al sistema. */
 .acceso--login {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     min-height: 100vh;
     min-height: 100svh;
     margin: 0;
-    background: #f7f8fa;
-    color: #303c46;
-    font: 14px/1.5 Arial, Helvetica, sans-serif;
+    place-items: center;
+    padding: 32px 24px;
+    background: #eef0f3;
+    color: #26363e;
+    font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
-.login__cabecera {
-    border-top: 3px solid #15354b;
-    background: #254b65;
-    color: #fff;
+.login {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    width: min(1020px, 100%);
+    min-height: 620px;
+    overflow: hidden;
+    border: 1px solid #e3e7e9;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 16px 48px rgba(29, 45, 53, .07);
 }
 
-.login__barra {
+.login__presentacion {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    width: min(1080px, calc(100% - 48px));
-    min-height: 76px;
-    margin: 0 auto;
+    flex-direction: column;
+    padding: 40px;
+    background: #1d2d35;
+    color: #fff;
 }
 
 .login__marca {
     display: flex;
     align-items: center;
-    gap: 20px;
-    color: #fff;
-    text-decoration: none;
+    gap: 18px;
 }
 
 .login__marca strong {
-    font: 700 23px Arial, Helvetica, sans-serif;
-    letter-spacing: .02em;
+    color: #fff;
+    font-family: inherit;
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: -1px;
 }
 
 .login__marca span {
-    padding-left: 20px;
-    border-left: 1px solid #6d8799;
-    color: #e0e8ee;
-    font-size: 13px;
+    padding-left: 18px;
+    border-left: 1px solid #51626a;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
 }
 
-.login__navegacion {
-    display: flex;
-    align-self: stretch;
-    gap: 28px;
+.login__introduccion {
+    margin: auto 0;
+    padding-top: 40px;
 }
 
-.login__navegacion a {
-    display: flex;
-    align-items: center;
-    padding: 3px 0 0;
-    border-bottom: 3px solid transparent;
-    color: #e0e8ee;
-    font-size: 13px;
-    text-decoration: none;
+.login__etiqueta {
+    margin: 0 0 12px;
+    color: #ad2438;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
 }
 
-.login__navegacion a[aria-current="page"] {
-    border-bottom-color: #fff;
-    color: #fff;
+.login__presentacion .login__etiqueta {
+    color: #edb0bc;
+    font-size: 9px;
 }
 
-.login__navegacion a:hover {
-    color: #fff;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-}
-
-.login {
-    flex: 1;
-    width: min(1080px, calc(100% - 48px));
-    margin: 0 auto;
-    padding: 32px 0 72px;
-}
-
-.login__ruta {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #6c7781;
-    font-size: 12px;
-}
-
-.login__ruta a {
-    color: #315d7b;
-    text-decoration: none;
-}
-
-.login__ruta a:hover {
-    text-decoration: underline;
-}
-
-.login__titulo {
-    margin-top: 22px;
-    padding-bottom: 22px;
-    border-bottom: 1px solid #dce2e7;
-}
-
-.login h1 {
-    margin: 0 0 7px;
-    font: 600 25px/1.35 Arial, Helvetica, sans-serif;
-    letter-spacing: 0;
-}
-
-.login__titulo p {
+.login__introduccion h2 {
     margin: 0;
-    color: #687580;
-    font-size: 14px;
+    color: #fff;
+    font-family: inherit;
+    font-size: clamp(27px, 2.7vw, 33px);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -.8px;
+}
+
+.login__resumen {
+    max-width: 330px;
+    margin: 17px 0 0;
+    color: #b9c9d1;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.login__ilustracion {
+    display: block;
+    width: min(100%, 310px);
+    height: auto;
+    margin: 16px auto 0;
+}
+
+.login__nota {
+    margin: 0;
+    padding-top: 24px;
+    color: #a6b8c1;
+    font-size: 10px;
 }
 
 .login__panel {
-    width: min(680px, 100%);
-    margin: 40px auto 0;
-    padding: 36px;
-    border: 1px solid #d9e0e6;
-    border-radius: 3px;
-    background: #fff;
+    align-self: center;
+    padding: 48px 54px;
+}
+
+.login__aplicacion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    color: #26363e;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -.5px;
+}
+
+.login h1 {
+    margin: 0;
+    font-family: inherit;
+    font-size: 31px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -.8px;
+}
+
+.login__descripcion {
+    margin: 10px 0 28px;
+    color: #637179;
+    font-size: 12px;
+    line-height: 1.7;
 }
 
 .login__formulario {
     display: grid;
-    gap: 22px;
-}
-
-.login__campo {
-    display: grid;
-    grid-template-columns: 152px minmax(0, 1fr);
-    align-items: center;
-    gap: 20px;
+    gap: 19px;
 }
 
 .login__campo label {
-    color: #3c4852;
-    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
+    color: #34434b;
+    font-size: 12px;
+    font-weight: 600;
 }
 
 .login__campo input {
     display: block;
     width: 100%;
-    height: 44px;
+    height: 46px;
     padding: 0 12px;
-    border: 1px solid #bac6d0;
-    border-radius: 3px;
+    border: 1px solid #dfe3e6;
+    border-radius: 6px;
     background: #fff;
-    color: #303c46;
-    font: 16px Arial, Helvetica, sans-serif;
+    color: #26363e;
+    font: inherit;
+    font-size: 16px;
 }
 
 .login__campo input::placeholder {
-    color: #7b8791;
+    color: #8a9399;
     opacity: 1;
 }
 
 .login__campo input:focus {
-    outline: 2px solid #b6d0e1;
+    outline: 2px solid #edd0d6;
     outline-offset: 2px;
-    border-color: #426e8c;
+    border-color: #ad2438;
 }
 
 .login__password {
     position: relative;
-    min-width: 0;
 }
 
 .login__password input {
@@ -209,124 +217,117 @@ h1{font-size:clamp(1.8rem,3vw,2.35rem);font-weight:700;letter-spacing:0}
     position: absolute;
     top: 1px;
     right: 1px;
-    height: 42px;
+    height: 44px;
     padding: 0 12px;
     border: 0;
     background: transparent;
-    color: #315d7b;
-    font: 12px Arial, Helvetica, sans-serif;
+    color: #637179;
+    font: inherit;
+    font-size: 11px;
     cursor: pointer;
 }
 
 .login__mostrar:hover {
-    text-decoration: underline;
-}
-
-.login__acciones {
-    margin-left: 172px;
+    color: #ad2438;
 }
 
 .login__ingresar {
-    min-width: 132px;
-    min-height: 42px;
-    padding: 10px 24px;
-    border: 1px solid #244c68;
-    border-radius: 3px;
-    background: #2e607f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 46px;
+    margin-top: 4px;
+    padding: 11px 18px;
+    border: 1px solid #ad2438;
+    border-radius: 6px;
+    background: #ad2438;
     color: #fff;
-    font: 600 14px Arial, Helvetica, sans-serif;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
     cursor: pointer;
 }
 
 .login__ingresar:hover {
-    background: #254b65;
+    border-color: #8f1b2d;
+    background: #8f1b2d;
 }
 
 .login__registro {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-    margin-top: 28px;
-    padding-top: 22px;
-    border-top: 1px solid #e3e8ec;
-    color: #687580;
-    font-size: 13px;
+    margin: 22px 0 0;
+    color: #637179;
+    font-size: 12px;
+    text-align: center;
 }
 
 .login__registro a {
-    color: #315d7b;
+    margin-left: 3px;
+    color: #ad2438;
+    font-weight: 700;
     text-underline-offset: 3px;
+}
+
+.login__seguridad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin: 34px 0 0;
+    color: #75828b;
+    font-size: 10px;
 }
 
 .acceso--login button:focus-visible,
 .acceso--login a:focus-visible {
-    outline: 2px solid #426e8c;
+    outline: 2px solid #ad2438;
     outline-offset: 3px;
 }
 
-.login__pie {
-    padding: 21px 0;
-    border-top: 1px solid #dce2e7;
-    background: #fff;
-    color: #687580;
-    font-size: 12px;
-}
-
-.login__pie > div {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-    width: min(1080px, calc(100% - 48px));
-    margin: 0 auto;
-}
-
-@media (max-width: 680px) {
-    .login__barra {
-        flex-wrap: wrap;
-        gap: 0 24px;
-        padding-top: 18px;
-    }
-
-    .login__marca {
-        width: 100%;
-        gap: 14px;
-    }
-
-    .login__marca span {
-        padding-left: 14px;
-        font-size: 12px;
-    }
-
-    .login__navegacion {
-        min-height: 48px;
-        margin-top: 6px;
-    }
-
-    .login {
-        padding-top: 24px;
-        padding-bottom: 40px;
+@media (max-width: 900px) {
+    .login__presentacion {
+        padding: 32px;
     }
 
     .login__panel {
-        margin-top: 28px;
-        padding: 26px 22px;
+        padding: 40px 34px;
     }
 
-    .login__campo {
+    .login__introduccion h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 640px) {
+    .acceso--login {
+        padding: 20px 16px;
+    }
+
+    .login {
         grid-template-columns: 1fr;
-        gap: 8px;
+        width: min(440px, 100%);
+        min-height: 0;
     }
 
-    .login__acciones {
-        margin-left: 0;
+    .login__presentacion {
+        padding: 24px;
+        border-bottom: 3px solid #ad2438;
     }
 
-    .login__ingresar {
-        width: 100%;
+    .login__introduccion,
+    .login__nota {
+        display: none;
     }
 
-    .login__pie > div {
-        flex-wrap: wrap;
-        gap: 4px 16px;
+    .login__panel {
+        padding: 32px 24px;
+    }
+
+    .login__aplicacion {
+        margin-bottom: 28px;
+    }
+
+    .login h1 {
+        font-size: 29px;
     }
 }

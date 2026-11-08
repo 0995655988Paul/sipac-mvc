@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" fill="none">
+  <ellipse cx="212" cy="287" rx="162" ry="12" fill="#14252C" opacity=".3"/>
+  <circle cx="212" cy="156" r="124" fill="#F4EBDD"/>
+  <circle cx="212" cy="156" r="105" fill="#FBF7EF"/>
+
+  <!-- Hoja de planificación. -->
+  <rect x="129" y="55" width="158" height="204" rx="11" fill="#D9DCCF"/>
+  <rect x="121" y="48" width="158" height="204" rx="11" fill="#FFFEFA" stroke="#D4D8CF" stroke-width="2"/>
+  <rect x="166" y="38" width="69" height="25" rx="7" fill="#D5B07B"/>
+  <path d="M190 40v-3a11 11 0 0 1 22 0v3" stroke="#D5B07B" stroke-width="7"/>
+  <path d="M147 87h82" stroke="#405A60" stroke-width="7" stroke-linecap="round"/>
+  <path d="M147 101h55" stroke="#BAC7C5" stroke-width="4" stroke-linecap="round"/>
+
+  <rect x="146" y="122" width="21" height="21" rx="4" fill="#8DA77A"/>
+  <path d="m151 132 4 4 7-9" stroke="#FFFDF7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M179 128h71m-71 11h48" stroke="#BDC9C5" stroke-width="4" stroke-linecap="round"/>
+  <rect x="146" y="158" width="21" height="21" rx="4" fill="#8DA77A"/>
+  <path d="m151 168 4 4 7-9" stroke="#FFFDF7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M179 164h71m-71 11h48" stroke="#BDC9C5" stroke-width="4" stroke-linecap="round"/>
+  <path d="M146 202h105" stroke="#E2E5DC" stroke-width="2"/>
+  <rect x="177" y="218" width="17" height="16" rx="2" fill="#C9D5B4"/>
+  <rect x="201" y="211" width="17" height="23" rx="2" fill="#A5BA8D"/>
+  <rect x="225" y="203" width="17" height="31" rx="2" fill="#7F9A69"/>
+
+  <!-- Paquete de inventario. -->
+  <path d="m48 201 34-22h75l-33 22H48Z" fill="#E6C79A"/>
+  <path d="M48 201h76v78H48z" fill="#DAB481"/>
+  <path d="m124 201 33-22v77l-33 23v-78Z" fill="#BD9566"/>
+  <path d="m79 201 34-22h17l-34 22H79Z" fill="#F7E5C4"/>
+  <path d="M79 201h17v29l-8-5-9 5v-29Z" fill="#F0D8AF"/>
+  <rect x="60" y="249" width="29" height="16" rx="2" fill="#F8EDD9"/>
+  <path d="M66 254h17m-17 5h11" stroke="#A18A6E" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Calculadora de presupuesto. -->
+  <rect x="265" y="154" width="100" height="132" rx="10" fill="#425F66"/>
+  <rect x="277" y="167" width="76" height="28" rx="4" fill="#DBE4D2"/>
+  <path d="M313 177h28m-20 8h20" stroke="#6B806E" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#A3B5B3">
+    <rect x="278" y="207" width="18" height="14" rx="3"/>
+    <rect x="306" y="207" width="18" height="14" rx="3"/>
+    <rect x="334" y="207" width="18" height="14" rx="3"/>
+    <rect x="278" y="230" width="18" height="14" rx="3"/>
+    <rect x="306" y="230" width="18" height="14" rx="3"/>
+    <rect x="278" y="253" width="18" height="14" rx="3"/>
+    <rect x="306" y="253" width="18" height="14" rx="3"/>
+  </g>
+  <rect x="334" y="230" width="18" height="37" rx="3" fill="#B24755"/>
+  <path d="M339 248h8m-8 6h8" stroke="#F5D7DA" stroke-width="2" stroke-linecap="round"/>
+</svg>
