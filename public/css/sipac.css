@@ -34,21 +34,37 @@ h1{font-size:clamp(1.8rem,3vw,2.35rem);font-weight:700;letter-spacing:0}
 .acceso--login {
     min-height: 100vh;
     min-height: 100svh;
-    padding: 40px 24px;
-    background: #f4f6f8;
+    padding: 40px 32px;
+    background: #edf1f5;
     color: #253747;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 }
 
 .login {
-    width: min(440px, 100%);
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    width: min(1020px, 100%);
+    min-height: 600px;
+    overflow: hidden;
+    border: 1px solid #d8e0e7;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 16px 48px rgba(29, 51, 70, .09);
+}
+
+.login__identidad {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 42px;
+    background: #17364d;
+    color: #fff;
 }
 
 .login__marca {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin: 0 0 24px 4px;
 }
 
 .login__marca .marca__simbolo {
@@ -56,7 +72,8 @@ h1{font-size:clamp(1.8rem,3vw,2.35rem);font-weight:700;letter-spacing:0}
     height: 40px;
     flex-shrink: 0;
     border-radius: 7px;
-    background: #214e6b;
+    border: 1px solid #7892a5;
+    background: transparent;
     color: #fff;
     font-size: 23px;
 }
@@ -72,32 +89,87 @@ h1{font-size:clamp(1.8rem,3vw,2.35rem);font-weight:700;letter-spacing:0}
 .login__marca div > span {
     display: block;
     margin-top: 2px;
-    color: #647381;
+    color: #bacbd7;
     font-size: 13px;
 }
 
+.login__presentacion h2 {
+    margin: 0 0 18px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 38px;
+    line-height: 1.15;
+    letter-spacing: -.025em;
+}
+
+.login__presentacion p {
+    max-width: 280px;
+    margin: 0;
+    color: #bacbd7;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.login__modulos {
+    display: grid;
+    gap: 16px;
+    margin: auto 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.login__modulos li {
+    padding-top: 15px;
+    border-top: 1px solid #39566c;
+}
+
+.login__modulos strong,
+.login__modulos span {
+    display: block;
+}
+
+.login__modulos strong {
+    margin-bottom: 3px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.login__modulos span {
+    color: #bacbd7;
+    font-size: 12px;
+}
+
 .login__panel {
-    overflow: hidden;
-    border: 1px solid #dce3e9;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 8px 28px rgba(29, 51, 70, .06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 52px;
 }
 
 .login__contenido {
-    padding: 34px 36px 32px;
+    width: 100%;
+    max-width: 380px;
+}
+
+.login__etiqueta {
+    margin: 0 0 14px;
+    color: #637584;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .12em;
 }
 
 .login h1 {
     margin: 0 0 9px;
     font-family: inherit;
-    font-size: 26px;
+    font-size: 30px;
     line-height: 1.25;
     letter-spacing: -.02em;
 }
 
 .login__descripcion {
-    margin: 0 0 28px;
+    margin: 0 0 32px;
     color: #647381;
     font-size: 14px;
     line-height: 1.6;
@@ -165,12 +237,16 @@ h1{font-size:clamp(1.8rem,3vw,2.35rem);font-weight:700;letter-spacing:0}
 }
 
 .login__ingresar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
     min-height: 48px;
     margin-top: 4px;
     padding: 12px 16px;
-    border: 1px solid #214e6b;
+    border: 1px solid #17364d;
     border-radius: 6px;
-    background: #214e6b;
+    background: #17364d;
     color: #fff;
     font: inherit;
     font-size: 14px;
@@ -188,9 +264,9 @@ h1{font-size:clamp(1.8rem,3vw,2.35rem);font-weight:700;letter-spacing:0}
     justify-content: center;
     flex-wrap: wrap;
     gap: 6px;
-    padding: 19px 24px;
+    margin-top: 30px;
+    padding-top: 24px;
     border-top: 1px solid #e8edf1;
-    background: #fafbfc;
     color: #647381;
     font-size: 13px;
 }
@@ -207,20 +283,52 @@ h1{font-size:clamp(1.8rem,3vw,2.35rem);font-weight:700;letter-spacing:0}
     outline-offset: 3px;
 }
 
-.login__pie {
-    margin: 22px 0 0;
-    color: #6b7885;
-    font-size: 12px;
-    text-align: center;
-}
-
-@media (max-width: 480px) {
-    .acceso--login {
-        padding: 32px 20px;
+@media (max-width: 900px) {
+    .login__identidad {
+        padding: 32px;
     }
 
-    .login__contenido {
-        padding: 28px 24px;
+    .login__panel {
+        padding: 40px 32px;
+    }
+
+    .login__presentacion h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 720px) {
+    .acceso--login {
+        padding: 24px 16px;
+    }
+
+    .login {
+        grid-template-columns: 1fr;
+        width: min(440px, 100%);
+        min-height: 0;
+    }
+
+    .login__identidad {
+        gap: 24px;
+        padding: 28px;
+    }
+
+    .login__presentacion h2 {
+        margin: 0;
+        font-size: 27px;
+    }
+
+    .login__presentacion h2 br {
+        display: none;
+    }
+
+    .login__presentacion p,
+    .login__modulos {
+        display: none;
+    }
+
+    .login__panel {
+        padding: 32px 28px;
     }
 
     .login h1 {

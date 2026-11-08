@@ -4,22 +4,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Acceso · SIPAC</title>
-    <link rel="stylesheet" href="<?= esc(base_url('css/sipac.css?v=4'), 'attr') ?>">
+    <link rel="stylesheet" href="<?= esc(base_url('css/sipac.css?v=5'), 'attr') ?>">
 </head>
 <body class="acceso acceso--login">
 <main class="login">
-    <header class="login__marca">
-        <span class="marca__simbolo" aria-hidden="true">S</span>
-        <div>
-            <strong>SIPAC</strong>
-            <span>Administración de compras</span>
+    <aside class="login__identidad" aria-label="Acerca de SIPAC">
+        <header class="login__marca">
+            <span class="marca__simbolo" aria-hidden="true">S</span>
+            <div>
+                <strong>SIPAC</strong>
+                <span>Sistema administrativo</span>
+            </div>
+        </header>
+
+        <div class="login__presentacion">
+            <h2>Planificación<br> de compras</h2>
+            <p>Administra los recursos y organiza las compras de tu institución.</p>
         </div>
-    </header>
+
+        <ul class="login__modulos">
+            <li><strong>Inventario</strong><span>Productos y existencias</span></li>
+            <li><strong>Proveedores</strong><span>Contactos y cotizaciones</span></li>
+            <li><strong>Presupuesto</strong><span>Planificación y control de compras</span></li>
+        </ul>
+    </aside>
 
     <section class="login__panel" aria-labelledby="login-titulo">
         <div class="login__contenido">
+            <p class="login__etiqueta">ACCESO ADMINISTRATIVO</p>
             <h1 id="login-titulo">Iniciar sesión</h1>
-            <p class="login__descripcion">Accede con tu cuenta para administrar el sistema.</p>
+            <p class="login__descripcion">Ingresa tu correo y contraseña para continuar.</p>
 
             <?php if ($exito = session()->getFlashdata('exito')): ?>
                 <div class="alerta alerta--ok" role="status"><?= esc($exito) ?></div>
@@ -44,17 +58,20 @@
                     </div>
                 </div>
 
-                <button class="login__ingresar" type="submit">Ingresar al sistema</button>
+                <button class="login__ingresar" type="submit">
+                    <span>Ingresar al sistema</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                        <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
             </form>
+
+            <footer class="login__registro">
+                <span>¿Aún no tienes una cuenta?</span>
+                <a href="<?= esc(site_url('registro'), 'attr') ?>">Crear cuenta</a>
+            </footer>
         </div>
-
-        <footer class="login__registro">
-            <span>¿Aún no tienes una cuenta?</span>
-            <a href="<?= esc(site_url('registro'), 'attr') ?>">Crear cuenta</a>
-        </footer>
     </section>
-
-    <p class="login__pie">Sistema de planificación de compras</p>
 </main>
 <script>
     const passwordInput = document.querySelector('#password');
