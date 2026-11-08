@@ -2,6 +2,11 @@
 
 Administración web del core aprobado de **SIPAC: Sistema de planificación de compras y análisis de riesgos presupuestarios**. Está construido con PHP 8.2+, CodeIgniter 4 y SQLite, siguiendo MVC y separando controladores, modelos, servicios de dominio y vistas.
 
+## Enlaces de entrega
+
+- [Video explicativo de la administración MVC en YouTube](https://youtu.be/QndbRGHM18c).
+- [Repositorio público del proyecto en GitHub](https://github.com/0995655988Paul/sipac-mvc).
+
 ## Qué se puede demostrar
 
 - Inicio de sesión con sesión regenerada, CSRF y contraseñas con `bcrypt`.
@@ -19,6 +24,7 @@ Administración web del core aprobado de **SIPAC: Sistema de planificación de c
 Requisitos: PHP 8.2+ con `intl`, `mbstring` y `sqlite3`, Composer y Git.
 
 ```bash
+git clone https://github.com/0995655988Paul/sipac-mvc.git
 cd sipac-mvc
 composer install
 cp .env.example .env
@@ -72,15 +78,19 @@ Las pruebas unitarias cubren el algoritmo de RUC y la fórmula de necesidad/cost
 
 ## Git
 
-El proyecto tiene su propio repositorio Git local y debe publicarse en el repositorio remoto de la entrega:
+El código y su historial están publicados en la rama `main` del [repositorio público de SIPAC](https://github.com/0995655988Paul/sipac-mvc). El README incluye los requisitos, la instalación, la organización MVC y el recorrido de demostración.
 
-```bash
-git init
-git add .
-git commit -m "feat: administrar core SIPAC con MVC"
-git branch -M main
-git remote add origin https://github.com/TU_USUARIO/sipac-mvc.git
-git push -u origin main
-```
+## Revisión de los requisitos de la tarea
 
-Para publicar el proyecto, conecta este repositorio a la plataforma de hosting que indique la materia y configura `app.baseURL` con la URL pública. En producción usa HTTPS, cambia las credenciales de demostración y utiliza una base persistente.
+| Requisito | Evidencia |
+| --- | --- |
+| Administración vinculada al core aprobado | Productos, inventario, proveedores, cotizaciones y presupuestos alimentan la generación del plan de compra. |
+| Validación de un dato sensible en back-end | `Proveedores::persistir` llama a `RucEcuador::esValido` antes de guardar. También comprueba duplicados y la base de datos tiene un índice único para el RUC. |
+| Referencias seleccionadas desde tablas relacionadas | Proveedores, productos y presupuestos se eligen con listas desplegables. En planificación, las cotizaciones se cargan según el producto y el servidor vuelve a validar la relación. |
+| Código versionado y README | Repositorio público con historial Git, instrucciones y pruebas unitarias. |
+| Video explicativo | Enlazado en la sección de entrega. |
+| Sistema desplegado | **Pendiente**. La ejecución actual es local y todavía falta una URL pública del sistema en un hosting. |
+
+## Despliegue
+
+Para completar la entrega, se debe publicar la aplicación en un hosting compatible con PHP y SQLite, configurar `app.baseURL` con su URL pública y disponer de almacenamiento persistente para la base. En producción se deben configurar HTTPS, el entorno `production` y credenciales distintas de las utilizadas en la demostración.
